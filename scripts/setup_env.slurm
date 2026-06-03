@@ -46,10 +46,10 @@ pip install torch==2.7.0 torchvision torchaudio \
 echo ""
 echo "Step 3: Installing SAM 3..."
 
-SAM3_DIR="/home/zihara_delgado_uri_edu/sam3"
+SAM3_DIR="/home/yue_mao_uri_edu/sam3"
 
 if [ ! -d "$SAM3_DIR" ]; then
-    cd /home/zihara_delgado_uri_edu/
+    cd /home/yue_mao_uri_edu/
     git clone https://github.com/facebookresearch/sam3.git
 fi
 
@@ -64,7 +64,7 @@ pip install einops psutil
 echo ""
 echo "Step 4: Installing pipeline dependencies..."
 
-PIPELINE_DIR="/home/zihara_delgado_uri_edu/sam3-pipeline"
+PIPELINE_DIR="/home/yue_mao_uri_edu/sam3-pipeline"
 cd "$PIPELINE_DIR"
 
 # Install from requirements.txt
