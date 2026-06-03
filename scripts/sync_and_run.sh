@@ -4,8 +4,8 @@
  
 set -e
  
-PROJECT_DIR="/home/zihara_delgado_uri_edu/sam3-pipeline"
-QUEUE_DIR="/home/zihara_delgado_uri_edu/queue"
+PROJECT_DIR="$HOME/sam3-pipeline"
+QUEUE_DIR="$HOME/queue"
 GDRIVE_QUEUE="gdrive:DeepSea_ObjectDetection/rclone/queue/"
  
 echo "========================================"
