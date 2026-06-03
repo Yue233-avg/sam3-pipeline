@@ -59,6 +59,7 @@ pip install -e .
 # Fix known dependency issues
 pip install "setuptools<70"
 pip install einops psutil
+pip install einops psutil pycocotools
 
 # 5. Install pipeline requirements
 echo ""
