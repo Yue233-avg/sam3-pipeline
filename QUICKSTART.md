@@ -4,13 +4,15 @@
 
 ```bash
 # 1. Clone repo on Unity
-cd /home/zihara_delgado_uri_edu/
-git clone https://github.com/ziharadelgado/sam3-shark-pipeline.git
+cd $HOME
+# git clone https://github.com/Your github account/sam3-pipeline.git
+git clone https://github.com/Yue233-avg/sam3-pipeline.git
 cd sam3-shark-pipeline
 
 # 2. Setup environment (submit job)
 sbatch scripts/setup_env.slurm
 # Wait ~30min, check: tail -f logs/setup_*.out
+# Check the queue status: squeue -u $USER (ST: status; R: running; PD: pending)
 
 # 3. Login to HuggingFace
 huggingface-cli login
