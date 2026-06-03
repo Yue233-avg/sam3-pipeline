@@ -1,10 +1,11 @@
 #!/bin/bash
 # Download SAM 3 checkpoint from HuggingFace
-# Requires: HuggingFace access approved + huggingface-cli login
+# Requires: HuggingFace access approved + huggingface-cli login (old)
+# Requires: HuggingFace access approved + hf auth login (new)
 
 set -e
 
-CHECKPOINT_DIR="/home/zihara_delgado_uri_edu/checkpoints"
+CHECKPOINT_DIR="$HOME/checkpoints"
 CHECKPOINT_PATH="$CHECKPOINT_DIR/sam3.pt"
 
 echo "========================================"
@@ -24,11 +25,11 @@ fi
 # Check HuggingFace login
 echo ""
 echo "Checking HuggingFace authentication..."
-if ! huggingface-cli whoami &> /dev/null; then
+if ! hf auth whoami &> /dev/null; then
     echo "❌ ERROR: Not logged in to HuggingFace"
     echo ""
     echo "Please run:"
-    echo "  huggingface-cli login"
+    echo "  hf auth login"
     echo ""
     echo "Then request access at:"
     echo "  https://huggingface.co/facebook/sam3"
@@ -57,8 +58,8 @@ except Exception as e:
     print(f'\n❌ Download failed: {e}')
     print('\nTroubleshooting:')
     print('1. Request access: https://huggingface.co/facebook/sam3')
-    print('2. Check login: huggingface-cli whoami')
-    print('3. Try re-login: huggingface-cli login')
+    print('2. Check login: hf auth whoami')
+    print('3. Try re-login: hf auth login')
     exit(1)
 EOF
 
