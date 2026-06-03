@@ -30,7 +30,7 @@ conda activate sam3
 mkdir -p logs
 
 # 2. Paths
-WORK_DIR="/home/zihara_delgado_uri_edu"
+WORK_DIR="$HOME"
 QUEUE_DIR="$WORK_DIR/queue"
 OUTPUT_DIR="$WORK_DIR/processed"
 CHECKPOINT="$WORK_DIR/checkpoints/sam3.pt"
@@ -98,7 +98,7 @@ echo ""
 echo "Step 2: Running SAM 3 segmentation..."
 mkdir -p "$OUTPUT_DIR"
 
-cd /home/zihara_delgado_uri_edu/sam3-pipeline
+cd "$HOME/sam3-pipeline"
 
 python3 -u src/annotate_with_sam3.py \
     --queue-dir "$QUEUE_DIR" \
